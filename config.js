@@ -3,10 +3,8 @@ System.config({
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
-    ]
+    "optional": [],
+    "blacklist": []
   },
   paths: {
     "github:*": "jspm_packages/github/*",
@@ -14,15 +12,18 @@ System.config({
   },
 
   packages: {
-    "js": {
-      "defaultExtension": ".jsx"
+    "app": {
+      "defaultExtension": "jsx"
     }
   },
 
   map: {
     "babel": "npm:babel-core@5.8.25",
     "babel-runtime": "npm:babel-runtime@5.8.25",
+    "bootstrap": "github:twbs/bootstrap@3.3.5",
     "core-js": "npm:core-js@1.2.2",
+    "events": "github:jspm/nodelibs-events@0.1.1",
+    "flux": "npm:flux@2.1.1",
     "jquery": "github:components/jquery@2.1.4",
     "react": "npm:react@0.14.0",
     "react-dom": "npm:react-dom@0.14.0",
@@ -50,6 +51,9 @@ System.config({
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
+    },
+    "github:twbs/bootstrap@3.3.5": {
+      "jquery": "github:components/jquery@2.1.4"
     },
     "npm:amdefine@1.0.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -93,6 +97,18 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:fbemitter@2.0.0": {
+      "fbjs": "npm:fbjs@0.1.0-alpha.7",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:fbjs@0.1.0-alpha.7": {
+      "core-js": "npm:core-js@1.2.2",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "promise": "npm:promise@7.0.4",
+      "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
+    },
     "npm:fbjs@0.3.2": {
       "core-js": "npm:core-js@1.2.2",
       "loose-envify": "npm:loose-envify@1.1.0",
@@ -100,6 +116,12 @@ System.config({
       "promise": "npm:promise@7.0.4",
       "ua-parser-js": "npm:ua-parser-js@0.7.9",
       "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
+    },
+    "npm:flux@2.1.1": {
+      "fbemitter": "npm:fbemitter@2.0.0",
+      "fbjs": "npm:fbjs@0.1.0-alpha.7",
+      "immutable": "npm:immutable@3.7.5",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:history@1.12.3": {
       "deep-equal": "npm:deep-equal@1.0.1",

@@ -1,7 +1,9 @@
 {
   "jspm": {
-    "directories": {},
     "dependencies": {
+      "bootstrap": "github:twbs/bootstrap@^3.3.5",
+      "events": "github:jspm/nodelibs-events@^0.1.1",
+      "flux": "npm:flux@^2.1.1",
       "jquery": "github:components/jquery@^2.1.4",
       "react": "npm:react@^0.14.0",
       "react-dom": "npm:react-dom@^0.14.0",
@@ -12,5 +14,12 @@
       "babel-runtime": "npm:babel-runtime@^5.8.20",
       "core-js": "npm:core-js@^1.1.0"
     }
+  },
+  "dependencies": {
+    "jspm": "^0.16.13"
+  },
+  "devDependencies": {
+    "eslint": "^1.7.3",
+    "nodemon": "^1.7.3"
   }
 }

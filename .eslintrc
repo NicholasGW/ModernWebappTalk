@@ -1,4 +1,9 @@
 {
+
+  "plugins": [
+    "react"
+  ],
+
   "env": {
     "node": true,
     "es6": true,
@@ -9,6 +14,8 @@
     "modules": true
   },
   "rules": {
-    "quotes": 0
+    "quotes": 0,
+    "camelcase": 0,
+    "no-underscore-dangle": 0,
   }
 }
