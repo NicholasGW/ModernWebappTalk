@@ -5,6 +5,10 @@ import SPAHeader from 'app/components/SPAHeader';
 import Navbar from 'app/components/NavBar';
 import BindingExample from 'app/components/Binding';
 import Compliments from 'app/components/Compliments';
+import Container from 'app/components/Container';
+import Both from 'app/components/Both';
+import Insults from 'app/components/Insults';
+
 import bootstrap from 'bootstrap';
 
 const App = React.createClass({
@@ -24,8 +28,11 @@ const App = React.createClass({
 ReactDOM.render((
   <Router>
     <Route path="/" component={App}>
+      <Route path="/props" component={Container}></Route>
       <Route path="/state" component={BindingExample}></Route>
+      <Route path="/both" component={Both}></Route>
       <Route path="/compliments" component={Compliments}></Route>
+      <Route path="/insults" component={Insults}></Route>
     </Route>
   </Router>
 ), document.querySelector("#container"));

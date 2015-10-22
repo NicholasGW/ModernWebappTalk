@@ -1,0 +1,21 @@
+.nav li {
+  margin-left: 15px;
+  display: inline;
+}
+
+.nav li a {
+  display: inline;
+}
+
+.nav {
+  margin-bottom: 20px;
+}
+
+.nav ul {
+    padding: 0px;
+}
+
+.items .removeItem:hover {
+  background-color: #87CEFA;
+  color: white;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import ComplimentStore from 'app/stores/ComplimentStore.js';
 import { dispatch } from 'app/dispatcher.js'
-import { addCompliment } from 'app/actions/complimentActions.js'
+import { addCompliment, removeCompliment } from 'app/actions/complimentActions.js'
 
 const Compliments = React.createClass({
 
@@ -27,10 +27,25 @@ const Compliments = React.createClass({
 
   _onSubmit() {
     dispatch(addCompliment(this.state.text));
+    this.setState({text: ''});
   },
+
+  _onClick(e) {
+    dispatch(removeCompliment(Number(e.target.id)));
+  },
+
   render () {
 
-    let compliments = this.state.compliments.map((compliment) => <li>{compliment.text}</li>);
+    let compliments = this.state.compliments.map((compliment) => {
+
+    return (
+      <div className="items">
+        <span id={compliment.id} className="removeItem" style={{cursor: "pointer"}} onClick={this._onClick}>X</span> {compliment.text}
+      </div>
+    )
+  })
+
+
     return (
       <div className="row-fluid clearfix">
         <div className="col-lg-12" style={{textAlign: "center"}}>
@@ -42,13 +57,16 @@ const Compliments = React.createClass({
                    onChange={this._complimentEdit}>
             </input>
 
-          <button className="btn btn-primary btn-sm" type="button" onClick={this._onSubmit}> Add Compliment </button>
+          <button className="btn btn-primary btn-sm"
+                  type="button"
+                  onClick={this._onSubmit}
+                  style={{marginLeft: "10px"}}> Add Compliment </button>
           </form>
 
-          <div style={{width: "400px", marginLeft: "auto", marginRight: "auto"}}>
-            <ul>
+          <div style={{width: "400px", marginLeft: "auto", marginRight: "auto", marginTop: "10px"}}>
+
               {compliments}
-            </ul>
+
           </div>
         </div>
       </div>

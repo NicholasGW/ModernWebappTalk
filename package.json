@@ -20,6 +20,8 @@
   },
   "devDependencies": {
     "eslint": "^1.7.3",
+    "eslint-plugin-react": "^3.6.3",
+    "express": "^4.13.3",
     "nodemon": "^1.7.3"
   }
 }

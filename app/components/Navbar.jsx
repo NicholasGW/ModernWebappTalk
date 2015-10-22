@@ -4,22 +4,31 @@ import { Link } from 'react-router';
 const Navbar = React.createClass({
   render () {
 
-    let liStyle = {display: "inline", marginLeft: "20px"};
-
-
 
     return (
-      <div className="row-fluid clearfix">
+      <div className="row-fluid clearfix nav ">
         <div className="col-lg-12" style={{textAlign: "center"}} >
           <h1> NAVIGATION </h1>
           <ul>
-            <li style={liStyle}>
-              <Link to="/state"> Binding</Link>
+            <li>
+              <Link to="/props"> Props </Link>
             </li>
-            <li style={liStyle}>|</li>
-            <li style={liStyle}>
+            <li>|</li>
+            <li>
+              <Link to="/state"> State</Link>
+            </li>
+            <li>|</li>
+            <li>
+            <Link to="/both"> Both </Link>
+           </li>
+           <li>|</li>
+            <li>
               <Link to="/compliments"> Compliments</Link>
             </li>
+            <li>|</li>
+            <li>
+             <Link to="/insults"> Insults</Link>
+           </li>
           </ul>
       </div>
     </div>

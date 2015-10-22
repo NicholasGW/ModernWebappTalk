@@ -62,7 +62,9 @@ let ComplimentStore = Object.assign({}, EventEmitter.prototype, {
       /*** Removes a compliment by ID. Uses filter ***/
       case REMOVE_COMPLIMENT:
 
-        compliments = compliments.filter((compliment) => compliment.id !== action.compliment.id);
+        compliments = compliments.filter((compliment) => {
+          return compliment.id !== action.id;
+        });
 
         ComplimentStore.emitChange();
         break;
