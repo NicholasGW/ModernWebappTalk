@@ -15,9 +15,33 @@ export function fetchInsult() {
   }
 }
 
+
 export function storeInsult(insult) {
   return {
     type: STORE_INSULT,
     insult
   }
 }
+
+
+
+
+
+
+
+
+
+// export function sendInsult(insult) {
+//
+//   return function() {
+//
+//     $.ajax({
+//       method:"POST",
+//       url:'insults',
+//       data: JSON.stringify({insult}),
+//       contentType: "application/json"
+//     }).then((insult) => {
+//       dispatch(storeInsult(insult));
+//     })
+//   }
+// }

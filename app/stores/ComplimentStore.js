@@ -13,7 +13,7 @@ compliment: {
               }
 ****/
 
-let compliments = [{id: 1, text: "React rocks!"}];
+let compliments = [{id: 1, text: "React rocks!"}, {id: 2, text: "You're so smart!"}];
 
 
 let ComplimentStore = Object.assign({}, EventEmitter.prototype, {
