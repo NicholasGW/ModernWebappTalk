@@ -8,7 +8,7 @@ const Navbar = React.createClass({
     return (
       <div className="row-fluid clearfix nav ">
         <div className="col-lg-12" style={{textAlign: "center"}} >
-          <h1> NAVIGATION </h1>
+          <h1> NAVIGATION  </h1>
           <ul>
             <li>
               <Link to="/props"> Props </Link>

@@ -17,10 +17,15 @@ const Both = React.createClass({
   render () {
     return (
       <div className="row-fluid clearix">
-    <div><input type="checkbox" value="red" name="background" onChange={this._onBackgroundCheck}/>Red Background</div>
-    <div><input type="checkbox" value="white" name="text" onChange={this._onTextColor} /> White Text</div>
+        <div>
+          <input type="checkbox" value="red" name="background" onChange={this._onBackgroundCheck}/>Red Background
+        </div>
+        <div>
+          <input type="checkbox" value="white" name="text" onChange={this._onTextColor} />
+           White Text
+        </div>
 
-      <ColorButton color={this.state.color} textColor={this.state.textColor} />
+          <ColorButton color={this.state.color} textColor={this.state.textColor} />
       </div>
     )
   }

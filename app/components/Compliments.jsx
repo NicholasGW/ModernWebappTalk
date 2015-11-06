@@ -36,11 +36,13 @@ const Compliments = React.createClass({
 
   render () {
 
+
     let compliments = this.state.compliments.map((compliment) => {
 
     return (
       <div className="items">
-        <span id={compliment.id} className="removeItem" style={{cursor: "pointer"}} onClick={this._onClick}>X</span> {compliment.text}
+        <span id={compliment.id} className="removeItem" style={{cursor: "pointer"}} onClick={this._onClick}>X</span>
+          {compliment.text}
       </div>
     )
   })
