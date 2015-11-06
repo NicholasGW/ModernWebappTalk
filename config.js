@@ -12,9 +12,16 @@ System.config({
   },
 
   packages: {
+    "app/components": {
+      "defaultExtension": "jsx",
+    },
+
     "app": {
-      "defaultExtension": "jsx"
+      modules: {
+        "main.jsx": true
+      }
     }
+
   },
 
   map: {

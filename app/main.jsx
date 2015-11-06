@@ -13,14 +13,12 @@ import bootstrap from 'bootstrap';
 
 const App = React.createClass({
   render () {
-    return (
-  <div className="container">
-    <SPAHeader greeting="Welcome!"/>
-    <Navbar />
-{this.props.children}
-  </div>
-
-  );
+    return (<div className="container">
+          <SPAHeader greeting="Welcome!"/>
+          <Navbar />
+      {this.props.children}
+        </div>
+      );
   }
 });
 
@@ -28,11 +26,11 @@ const App = React.createClass({
 ReactDOM.render((
   <Router>
     <Route path="/" component={App}>
-      <Route path="/props" component={Container}></Route>
-      <Route path="/state" component={BindingExample}></Route>
-      <Route path="/both" component={Both}></Route>
-      <Route path="/compliments" component={Compliments}></Route>
-      <Route path="/insults" component={Insults}></Route>
+      <Route path="/props" component={Container} />
+      <Route path="/state" component={BindingExample} />
+      <Route path="/both" component={Both} />
+      <Route path="/compliments" component={Compliments} />
+      <Route path="/insults" component={Insults} />
     </Route>
   </Router>
 ), document.querySelector("#container"));

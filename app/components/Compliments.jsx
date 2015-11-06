@@ -5,16 +5,16 @@ import { addCompliment, removeCompliment } from 'app/actions/complimentActions.j
 
 const Compliments = React.createClass({
 
+  getInitialState() {
+    return {compliments: ComplimentStore.getCompliments()};
+  },
+
   componentDidMount() {
     ComplimentStore.addChangeListener(this._onChange);
   },
 
   componentWillUnmount() {
     ComplimentStore.removeChangeListener(this._onChange);
-  },
-
-  getInitialState() {
-    return {compliments: ComplimentStore.getCompliments()};
   },
 
   _onChange() {

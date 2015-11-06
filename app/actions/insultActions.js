@@ -24,13 +24,6 @@ export function storeInsult(insult) {
 }
 
 
-
-
-
-
-
-
-
 // export function sendInsult(insult) {
 //
 //   return function() {

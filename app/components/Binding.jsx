@@ -13,7 +13,7 @@ const BindingExample = React.createClass({
   render () {
     return (
       <div>
-        Type:{' '}
+        Type here:{' '}
         <input name="text" type="text" value={this.state.text} onChange={this._onTextEdit}></input>
         <div style={{marginTop: "10px", fontSize: "48px"}}>{this.state.text}</div>
       </div>
