@@ -16,9 +16,7 @@
     }
   },
   "dependencies": {
-    "jspm": "^0.16.13"
-  },
-  "devDependencies": {
+    "jspm": "^0.16.13",
     "body-parser": "^1.14.1",
     "eslint": "^1.7.3",
     "eslint-plugin-react": "^3.6.3",
