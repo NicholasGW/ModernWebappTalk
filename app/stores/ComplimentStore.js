@@ -1,7 +1,7 @@
-import dispatcher from 'app/dispatcher.js';
+import dispatcher from '../dispatcher';
 import { EventEmitter } from 'events';
 
-import { ADD_COMPLIMENT, REMOVE_COMPLIMENT } from 'app/constants/complimentConstants.js';
+import { ADD_COMPLIMENT, REMOVE_COMPLIMENT } from '../constants/complimentConstants';
 
 const CHANGE_EVENT = "change";
 

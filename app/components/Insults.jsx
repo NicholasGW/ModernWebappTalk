@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
-import InsultStore from 'app/stores/insultStore.js';
-import { dispatch } from 'app/dispatcher.js';
-import { fetchInsult } from 'app/actions/insultActions.js'
+import InsultStore from '../stores/insultStore';
+import { dispatch } from '../dispatcher';
+import { fetchInsult } from '../actions/insultActions'
 const Insults = React.createClass({
 
   getInitialState() {

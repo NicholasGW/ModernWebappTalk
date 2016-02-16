@@ -19,3 +19,11 @@
   background-color: #87CEFA;
   color: white;
 }
+
+.items {
+  text-align: left;
+}
+
+.removeItem {
+  padding-right: 2px;
+}

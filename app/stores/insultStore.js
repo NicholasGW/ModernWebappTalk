@@ -1,7 +1,7 @@
-import dispatcher from 'app/dispatcher.js';
+import dispatcher from '../dispatcher';
 import { EventEmitter } from 'events';
 
-import { STORE_INSULT } from 'app/constants/insultConstants.js';
+import { STORE_INSULT } from '../constants/insultConstants';
 
 const CHANGE_EVENT = "change";
 

@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route } from 'react-router';
-import SPAHeader from 'app/components/SPAHeader';
-import Navbar from 'app/components/NavBar';
-import BindingExample from 'app/components/Binding';
-import Compliments from 'app/components/Compliments';
-import Container from 'app/components/Container';
-import Both from 'app/components/Both';
-import Insults from 'app/components/Insults';
+import { Router, Route, hashHistory } from 'react-router';
+import SPAHeader from './components/SPAHeader';
+import Navbar from './components/NavBar';
+import BindingExample from './components/Binding';
+import Compliments from './components/Compliments';
+import Container from './components/Container';
+import Both from './components/Both';
+import Insults from './components/Insults';
 
+import $ from 'jquery';
 import bootstrap from 'bootstrap';
 
 const App = React.createClass({
@@ -24,7 +25,7 @@ const App = React.createClass({
 
 
 ReactDOM.render((
-  <Router>
+  <Router history={hashHistory}>
     <Route path="/" component={App}>
       <Route path="/props" component={Container} />
       <Route path="/state" component={BindingExample} />

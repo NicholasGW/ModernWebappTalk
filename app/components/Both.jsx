@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import ColorButton from 'app/components/ColorButton'
+import ColorText from './ColorText'
 const Both = React.createClass({
 
   getInitialState() {
@@ -18,15 +18,24 @@ const Both = React.createClass({
     return (
       <div className="row-fluid clearix">
         <div>
-          <input type="checkbox" value="red" name="background" onChange={this._onBackgroundCheck}/>
+          <input type="checkbox"
+                 value="red"
+                 name="background"
+                 onChange={this._onBackgroundCheck}/>
+
           Red Background
         </div>
         <div>
-          <input type="checkbox" value="white" name="text" onChange={this._onTextColorCheck} />
+          <input type="checkbox"
+                 value="white"
+                 name="text"
+                 onChange={this._onTextColorCheck} />
+
            White Text
         </div>
 
-          <ColorButton backgroundColor={this.state.backgroundColor} textColor={this.state.textColor} />
+          <ColorText backgroundColor={this.state.backgroundColor}
+                       textColor={this.state.textColor} />
       </div>
     )
   }

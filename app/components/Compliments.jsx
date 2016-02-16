@@ -1,7 +1,7 @@
 import React from 'react';
-import ComplimentStore from 'app/stores/ComplimentStore.js';
-import { dispatch } from 'app/dispatcher.js'
-import { addCompliment, removeCompliment } from 'app/actions/complimentActions.js'
+import ComplimentStore from '../stores/ComplimentStore';
+import { dispatch } from '../dispatcher'
+import { addCompliment, removeCompliment } from '../actions/complimentActions'
 
 const Compliments = React.createClass({
 
@@ -37,10 +37,10 @@ const Compliments = React.createClass({
   render () {
 
 
-    let compliments = this.state.compliments.map((compliment) => {
+    let compliments = this.state.compliments.map((compliment, index) => {
 
     return (
-      <div className="items">
+      <div key={`compliment${index}`} className="items">
         <span id={compliment.id} className="removeItem" style={{cursor: "pointer"}} onClick={this._onClick}>X</span>
           {compliment.text}
       </div>

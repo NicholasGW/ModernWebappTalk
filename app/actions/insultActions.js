@@ -1,5 +1,5 @@
-import { FETCH_INSULT, STORE_INSULT } from 'app/constants/insultConstants.js';
-import { dispatch } from 'app/dispatcher.js';
+import { FETCH_INSULT, STORE_INSULT } from '../constants/insultConstants.js';
+import { dispatch } from '../dispatcher.js';
 import $ from 'jquery'
 
 export function fetchInsult() {

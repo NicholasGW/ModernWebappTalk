@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const ColorButton = React.createClass({
+const ColorText = React.createClass({
   render () {
     return (
       <div style={{backgroundColor: this.props.backgroundColor, marginTop: "10px"}}>
@@ -10,4 +10,4 @@ const ColorButton = React.createClass({
   }
 })
 
-export default ColorButton
+export default ColorText

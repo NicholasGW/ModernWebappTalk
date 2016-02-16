@@ -1,4 +1,4 @@
-import { ADD_COMPLIMENT, REMOVE_COMPLIMENT } from 'app/constants/complimentConstants.js';
+import { ADD_COMPLIMENT, REMOVE_COMPLIMENT } from '../constants/complimentConstants.js';
 
 
 export function addCompliment(text) {
